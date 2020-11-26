@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+
+<link rel="stylesheet" href="1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="promeniSliku(),tajmer(),Kolacici()">
+  <div class="prvi1">Pozovite nas besplatno:0800 003 009</div>
+  <div class="prvi">
+    RESTORAN ZVEZDA
+  </div>
+  <div class="nav">
+    
+    <a href="#" onmouseover="Zamuti()" onmouseout="Odmuti()" class="dugme2">Ponuda</a>
+    <a href="#" onmouseover="Zamuti()" onmouseout="Odmuti()" class="dugmeK">Kontakt</a>
+    <a href="#" onmouseover="Zamuti()" onmouseout="Odmuti()" class="dugme3"> O nama</a>
+    <p id="p1" style="position: absolute; left: 90%;"></p>
+    <a href="#" onmouseover="Zamuti()" onmouseout="Odmuti()" class="dugme1">Unesi podatke</a>
+    <a href="#" onmouseover="Zamuti()" onmouseout="Odmuti()" onclick="Kviz()">Kviz</a>
+ 
+  </div>
+  
+  
+  <div class="modal1">
+    <div class="modal2">
+      <i class="fa fa-grav" aria-hidden="true"></i>
+    <form name="forma" style="text-align: center;"><br><br>
+      <p id="ispisGreske"></p>
+      <label style="size: 11px;">Ime</label><br>
+      <input style="border-radius: 20px; text-align: center;font-weight: bold;"type="text" id="polje1" placeholder="Vaše Ime..."><br><br><br>
+      <label style="size: 11px;">Prezime</label><br>
+      <input  style="border-radius: 20px; text-align: center;font-weight: bold;" type="text" id="polje2" placeholder="Vaše Prezime.."><br><br><br>
+      <label>Email</label><br>
+      <input style="border-radius: 20px; text-align: center;font-weight: bold;" type="email" id="polje4" placeholder="Vaša e-mail adresa.." ><br><br><br><br>
+      
+      <button onclick="zatvoriPosalji()" class="potvrdi"><i class="fa fa-check-square" aria-hidden="true"></i>  Potvrdi</button>
+      <span class="zatvori"><i class="fa fa-window-close" aria-hidden="true"></i></span>
+    </form>
+    </div>
+  </div>
+
+
+  <div class="modalProfila">
+      
+     <img src="user.png" style="width: 50px;height: 50px;">
+      <p id="ispisizpolja" style="font-size: 12px;"></p><br><br>
+      <button class="izbrisi" onclick="izbrisiKolacice()">Izbriši</button>
+
+  </div>
+  <div style=" width: 100%; position: absolute;top: 20%;"> 
+    
+    <p id="p1" style="position: absolute;"></p>
+    <img id='slikice' src="1.png" class="slike">
+  </div>
+  <div class="modal22">
+    <div class="modal23">
+      <span class="zatvori1"><i class="fa fa-window-close" aria-hidden="true"></i></span>
+      <div class="divDugmica">
+        <br><br><br>
+        <button class="dugmeP" onmouseover="prikazi(), DodajRostilj()">Rostilj</button><br><br><br>
+        <button class="dugmeP" onmouseover="prikazi(), DodajKuvana()" >Kuvana jela</button><br><br><br>
+        <button class="dugmeP" onmouseover="prikazi(), DodajPecenja()">Pečenja</button><br><br><br>
+        <button class="dugmeP" onmouseover="prikazi(), DodajDezerte()" >Dezerti</button><br><br><br>
+      </div>
+      <div class="kontejnerProizvoda">
+            <div class="proizvodi">
+              <img src="" id="slika1" class="slikaProizvoda">
+              <p id="opis1"></p>
+              <p id="cena1"></p>
+
+            </div>
+
+            <div class="proizvodi">
+              <img src="" id="slika2" class="slikaProizvoda">
+              <p id="opis2"></p>
+              <p id="cena2"></p>
+            
+              
+            </div>
+
+            <div class="proizvodi">
+              <img src="" id="slika3" class="slikaProizvoda">
+              <p id="opis3"></p>
+              <p id="cena3"></p>
+
+            </div>
+
+
+      </div>
+     
+     
+
+      
+
+    </div>
+
+
+
+  </div>
+  <div class="modalOnama1">
+    <div class="modalOnama2">
+      <span class="zatvori3" ><i class="fa fa-window-close" aria-hidden="true"></i></span>
+      <p id="onama"></p>
+
+    </div>
+  </div>
+  <div class="modalKontakt">
+    <div class="modalKontakt1">
+      <span class="zatvori4" ><i class="fa fa-window-close" aria-hidden="true"></i></span>
+      <h3>INFO, PRODAJA i REZERVACIJA</h3>
+      <hr>
+     <p>Telefon: 062 10 44 444<br>
+      E-mail: zvezda612@gmail.rs<br>
+      radnim danima i subotom 10:00-22:00h
+     </p> <br><hr>
+      <h3>REKLAMACIJE i SERVIS</h3>
+      <hr>
+      <p>Telefon: 063 1 62 47 47<br>
+        E-mail: zvezda612@gmail.rs<br>
+        radnim danima 08:00-16:00h
+      </p> <br>
+      <hr><br>
+     
+        <label>Broj telefona</label><br>
+      <input id="broj" type="text" style="border-radius: 20px; text-align: center; width: 150px;" placeholder="Vaš broj telefona..">
+      <br><br>
+      <textarea  rows="6" cols="10" placeholder="Vaša poruka....."></textarea><br><br>
+      <button type="submit" onclick="ProveriBroj()" class="dugmeKontakta">Pošalji</button><br>
+      <P id="poruka" style="color: red;"></P>
+      
+      
+    </div>
+
+
+  </div>
+
+  <script src="1.js"></script> 
+</body>
+</html>
